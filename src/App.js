@@ -1,13 +1,17 @@
-
+import MainPage from './pages/mainPage';
+import Pedidos from './components/main/contents/Pedidos';
 import './App.css';
-import Header from './components/header/header';
-import Main from './components/main/main';
+import {BrowserRouter as Router,Route, Routes} from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
-      <Header/>
-      <Main/>
+    <div >
+      <Router>
+      <Routes>
+        <Route path='/' element ={<MainPage/>} />
+        <Route path='/pedidos' element={<Pedidos/>} />
+      </Routes>
+      </Router>
     </div>
   );
 }
