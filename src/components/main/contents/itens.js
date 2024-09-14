@@ -1,4 +1,4 @@
-
+import styles from './itens.module.css'
 import { useNavigate } from 'react-router-dom';
 import { useState } from "react"
 
@@ -64,11 +64,11 @@ let lista
 
      lista = listaDeProdutos.map((item,index)=>{
         return(
-            <article key={index}>
-                 <img src="" alt="imagem do produto"/>
-                <h3>{item.nome}</h3>
-                 <p>{item.valor.toFixed(2)}</p>
-                 <input type="button" value='Adicionar à sacola' onClick={()=>adicionar(item.nome,item.valor)}/>
+            <article key={index} className={styles.card}>
+                 <img src="" alt="imagem do produto" className={styles.cardImage}/>
+                <h3 className={styles.cardNome}>{item.nome}</h3>
+                 <p className={styles.cardValor}>{item.valor.toFixed(2)}</p>
+                 <input type="button" value='Adicionar à sacola' onClick={()=>adicionar(item.nome,item.valor)} className={styles.cardBot}/>
                  <Pedidos lista={sacola}/>                 
             </article>
 
@@ -79,8 +79,10 @@ let lista
 indiceDosProdutos()
     return(
         <div>
-            <button onClick={passarDados}>Sacola</button>
+            <button onClick={passarDados} className={styles.BotSacola}>Sacola</button>
+            <div className={styles.conteiner}>
             {lista}
+            </div>
         </div>
     )
 }

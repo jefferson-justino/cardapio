@@ -1,0 +1,26 @@
+
+ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+li{
+    list-style: none;
+}
+.botaoFiltro{
+    font-size: 20px;
+    font-weight: bolder;
+    background-color: orange;
+    padding: 0.5rem;
+    border-radius: 25px;
+    border-color: white;
+}
+.titulo{
+   text-align: center;
+   color: white;
+   font-size: 35px;
+   font-weight:900;
+   -webkit-text-stroke: 1.5px rgb(70, 70, 70);
+   text-stroke: 1.5px rgb(70, 70, 70);     
+}
