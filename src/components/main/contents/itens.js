@@ -1,8 +1,38 @@
 
-
+import { useNavigate } from 'react-router-dom';
 import { useState } from "react"
-import Pedidos from "./Pedidos"
+
+let valorTotal 
+
+function Pedidos({lista}){
+   
+    valorTotal= 0
+if(lista.length>0){
+  
+  
+   for(let i =0; i<lista.length;i++){
+      valorTotal=valorTotal+lista[i].valor
+      
+   }
+}   
+console.log('valor total: ', valorTotal, 'tam', lista.length)
+   return(
+       <>
+       </>
+   )
+}
+
+
+
+
 export default function Itens({index}){
+
+    const navigate = useNavigate()
+
+    const passarDados=()=>{
+        const dataToPass = { total: valorTotal, produtos: sacola };
+       navigate('/sacola', {state : dataToPass})
+    }
 
     const [sacola, setSacola] = useState([])
 
@@ -49,6 +79,7 @@ let lista
 indiceDosProdutos()
     return(
         <div>
+            <button onClick={passarDados}>Sacola</button>
             {lista}
         </div>
     )

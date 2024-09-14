@@ -1,5 +1,5 @@
 import MainPage from './pages/mainPage';
-import Pedidos from './components/main/contents/Pedidos';
+import Sacola from './pages/sacola';
 import './App.css';
 import {BrowserRouter as Router,Route, Routes} from 'react-router-dom'
 
@@ -9,7 +9,7 @@ function App() {
       <Router>
       <Routes>
         <Route path='/' element ={<MainPage/>} />
-        <Route path='/pedidos' element={<Pedidos/>} />
+        <Route path='/sacola' element ={<Sacola/>} />
       </Routes>
       </Router>
     </div>
