@@ -1,6 +1,8 @@
 import styles from './itens.module.css'
 import { useNavigate } from 'react-router-dom';
 import { useState } from "react"
+import fotoLanche from '../../../images/produto.png'
+
 
 let valorTotal 
 
@@ -15,7 +17,7 @@ if(lista.length>0){
       
    }
 }   
-console.log('valor total: ', valorTotal, 'tam', lista.length)
+
    return(
        <>
        </>
@@ -38,9 +40,9 @@ export default function Itens({index}){
 
 
 let lista
-    const produtos =[[{nome:'bolo de chocolate', valor:10.00, imagem:''},{nome:'brigadeiro', valor:2.00, imagem:''}],
-                     [{nome:'coxinha', valor:1.00, imagem:''}],
-                     [{nome:'coca cola', valor:8.00, imagem:''}]]
+    const produtos =[[{nome:'Bolo de chocolate', valor:10.00},{nome:'Brigadeiro', valor:1.00},{nome:'pudim',valor:9.5}],
+                     [{nome:'Coxinha', valor:5.00},{nome:'Pastel de carne',valor:3.5},{nome:'Empada',valor:2.5}],
+                     [{nome:'Coca cola', valor:8.00},{nome:'Pepsi',valor:6},{nome:'Fanta maracujá',valor:14}]]
     
     const adicionar=(nome,valor)=>{
     const novosItens ={
@@ -65,9 +67,9 @@ let lista
      lista = listaDeProdutos.map((item,index)=>{
         return(
             <article key={index} className={styles.card}>
-                 <img src="" alt="imagem do produto" className={styles.cardImage}/>
+                 <img src={fotoLanche} alt="imagem do produto" className={styles.cardImage}/>
                 <h3 className={styles.cardNome}>{item.nome}</h3>
-                 <p className={styles.cardValor}>{item.valor.toFixed(2)}</p>
+                 <p className={styles.cardValor}>R${item.valor.toFixed(2)}</p>
                  <input type="button" value='Adicionar à sacola' onClick={()=>adicionar(item.nome,item.valor)} className={styles.cardBot}/>
                  <Pedidos lista={sacola}/>                 
             </article>
@@ -75,11 +77,13 @@ let lista
         ) 
         
     })
+
 }
+
 indiceDosProdutos()
     return(
-        <div>
-            <button onClick={passarDados} className={styles.BotSacola}>Sacola</button>
+        <div className={styles.local}>
+            <button onClick={passarDados} className={styles.botSacola}>Sacola</button>
             <div className={styles.conteiner}>
             {lista}
             </div>

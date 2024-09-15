@@ -13,25 +13,6 @@
     border-radius: 12px;
     box-shadow:  1px 1px 15px 1px rgb(121, 54, 0);
 }
-.cardImage{
-    width: 250px;
-    height: 150px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-.cardBot{
-    font-size: 15px;
-    font-weight: bolder;
-    background-color: rgb(255, 238, 4);
-    padding: 0.5rem;
-    border-radius: 25px;
-    border-color: white;
-}
-.cardBot:hover{
-    transform:  scale(0.9);
-   
-    transition: all .1s ease-in-out 0s;
-}
 .cardNome{
     font-weight: 900;
     font-style: italic;
@@ -39,20 +20,48 @@
 .cardValor{
     font-weight: 900;
 }
-.botSacola{
-    font-size: 20px;
-    font-weight: bolder;
-    background-color: rgb(204, 75, 0);
-    padding: 0.5rem;
-    width: 200px;
-    border-radius: 10px;
-    /* border-color: white; */
-    margin-left: 42%;
-    color: white;
-    margin-bottom: 2%;
+.cardImage{
+    width: 250px;
+    height: 150px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
-.botSacola:hover{
+.pedido{
+    text-align: center;
+   color: white;
+   font-size: 30px;
+   font-weight:900;
+   -webkit-text-stroke: 1.5px rgb(70, 70, 70);
+        
+}
+.total{
+    text-align: center;
+    font-weight: 900;
+}
+hr{
+    border:dashed 1px white;
+}
+.Link {
+    color: inherit;        /* Remove a cor (herda a cor do elemento pai) */
+    text-decoration: none; /* Remove o sublinhado */
+}
+.BotFinal{
+    font-size: 15px;
+    font-weight: bolder;
+    background-color: rgb(255, 238, 4);
+    padding: 0.5rem;
+    border-radius: 25px;
+    border-color: white;
+}
+.BotFinal:hover{
     transform:  scale(0.9);
    
     transition: all .1s ease-in-out 0s;
+}
+.ConteinerTotal{
+    display: flex;
+    justify-content: space-around;
+    border-top: dashed 1px white;
+    padding-top: 1%;
+    margin-top: 1%;
 }

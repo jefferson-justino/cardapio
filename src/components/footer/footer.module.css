@@ -1,0 +1,14 @@
+footer{
+    margin-top: 2%;
+    width: 100%;
+    background-color:  rgb(202, 108, 0);
+    padding: 0.2%;
+    text-align: center;
+}
+footer p{
+    font-weight: 900;
+}
+.linkNome{
+    text-decoration:none;
+    color: rgb(20, 20, 20);
+}
